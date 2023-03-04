@@ -1,5 +1,5 @@
 # Food4Thought
-<i align="center">CodePath Web Development 101 Project</i>
+<i>CodePath Web Development 101 Project</i>
 
 <h1>ABOUT THE PROJECT</h1>
 <p>
