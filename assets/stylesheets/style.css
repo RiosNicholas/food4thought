@@ -16,3 +16,7 @@ body {
 .section-title {
   text-transform: uppercase;
 }
+
+.section-header-image {
+  /* width: 100%; */
+}
