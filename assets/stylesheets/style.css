@@ -3,6 +3,11 @@ html {
   width: 100%;
 }
 
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #A79AB7 0%, #C0BACA 11.98%, #EBEFE9 49.48%, #C8D6C3 87.5%, #B7CAB1 100%);
+}
+
 #website-logo-hero {
   height: 50%;
   width: 50%;
