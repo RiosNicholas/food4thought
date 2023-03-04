@@ -1,5 +1,6 @@
 # Food4Thought
-My CodePath Web Development 101 Project
+<i>CodePath Web Development 101 Project</i>
+
 <h1>ABOUT THE PROJECT</h1>
 <p>
   This website aims to bring awareness to child hunger in America – an often overlooked social justice issue. The content is informative and also serves as a tool to help children and families facing difficulty affording or accessing healthy food. The website emphasizes that today's children are our future, and a lack of nutrition stifles them from reaching their potential.
