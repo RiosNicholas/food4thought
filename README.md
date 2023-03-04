@@ -8,7 +8,6 @@
 <br>
 
 <h3>Mockup</h2>
-
 ***
 
 <p align="center">
@@ -16,7 +15,6 @@
 </p>
 
 <h3>Intended Users</h3>
-
 ***
 
 <p>
