@@ -23,34 +23,45 @@ a:hover, a:active {
   color: black; 
 }
 
-
+button {
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 /* HERO */
 .hero-header {
   text-align: center;
 }
 .hero-slogan {
-  font-size: 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-button {
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.hero-button-left, .hero-button-right{ 
   background-color: white;
   color: #A3A3A3;
   font-weight: bold;
-  border: none;
-  border-radius: 5px;
   font-size: 16px;
-  text-align: center;
   padding: 10px 20px;
-  cursor: pointer;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 
 
 /* FIND LOCAL FOOD BANKS*/ 
-#website-logo-hero {
-  height: 50%;
-  width: 50%;
+#hero-logo {
+  height: 45%;
+  width: 45%;
 }
 
 .section-title {
