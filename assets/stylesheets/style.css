@@ -7,10 +7,24 @@ html, body {
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  
+  font-family: Helvetica, Arial, sans-serif;  
+  padding: 20px 20px;
 }
 
+/* HERO */
+button {
+  background-color:  #008CBA;
+  border: none;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+
+/* FIND LOCAL FOOD BANKS*/ 
 #website-logo-hero {
   height: 50%;
   width: 50%;
@@ -20,6 +34,11 @@ body {
   text-transform: uppercase;
 }
 
+
+body, .section-header-image {
+  padding: 0px;
+}
+
 .section-header-image {
-  /* width: 100%; */
+  width: 100%;
 }
