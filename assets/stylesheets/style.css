@@ -80,7 +80,6 @@ button {
 
 
 /* FIND LOCAL FOOD BANKS*/ 
-
 .section-title {
   text-transform: uppercase;
   font-family: 'Bebas Neue';
@@ -105,6 +104,35 @@ body, .section-header-image {
 }
 
 
+/* FOOD BANK TOOL*/
+.food-bank-tool-wrapper {
+  display: flex;
+  flex: 1;
+}
+.tool-section-left, .tool-section-right {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+  width: 50%;
+}
+.tool-section-left {
+  background: #EBEFE9;
+}
+.tool-section-right {
+  background: #D9D9D9;
+}
+
+
+/* SUPPORT OUR FUTURE */
+.support-our-future-subsection {
+  padding:  15px 10%;
+  background-color: #B1BCAD;
+  font-size: 15px;
+}
+.subsection-header {
+  font-size: 30px;
+  font-weight: bolder;
+}
 
 /* FOOTER 
 
