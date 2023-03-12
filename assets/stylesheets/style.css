@@ -138,6 +138,32 @@ body, .section-header-image {
   font-weight: bolder;
 }
 
+
+/* CHILD HUNGER FACTS */
+.child-hunger-facts-container {
+  display: flex;
+  flex-direction: column;
+}
+.fact-box-top {
+  display: flex;
+  flex-direction: row;
+}
+.fact-box-middle {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.fact-box-bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.fact-box-list {
+  max-width: 60%;
+  max-height: 150px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.75);  border-radius: 20px;
+}
+
 footer {
   display: flex;
   flex-direction: column;
