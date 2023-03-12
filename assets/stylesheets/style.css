@@ -67,6 +67,10 @@ button {
   gap: 15px;
 }
 
+.hero-buttons button:hover {
+  background-color: #ededed;
+}
+
 .hero-button-left, .hero-button-right{ 
   flex:1;
   padding: 10px 20px;
