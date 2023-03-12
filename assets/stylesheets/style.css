@@ -15,12 +15,13 @@ body {
 }
 
 a:link, a:visited{
-color: black;
+  color: black;
+  text-decoration: none;
 }
 
 a:hover, a:active {
-  background-color: #a3a3a366;
-  color: black; 
+  color: #777777; 
+  text-decoration: none;
 }
 
 button {
@@ -138,16 +139,11 @@ body, .section-header-image {
   font-weight: bolder;
 }
 
-/* FOOTER 
-
 footer {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  min-height: 2vh;
   text-align: center;
   background-color: #C8D6C3;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
 }
-
-*/
