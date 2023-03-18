@@ -161,12 +161,12 @@ body, .section-header-image {
 
 
 /* SUPPORT OUR FUTURE */
-.support-our-future-subsection {
+.support-our-future-container {
   padding:  15px 10%;
   background-color: #B1BCAD;
   font-size: 15px;
 }
-.subsection-header {
+.support-our-future-header {
   font-size: 30px;
   font-weight: bolder;
 }
