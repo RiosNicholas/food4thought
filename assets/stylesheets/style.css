@@ -139,7 +139,9 @@ body, .section-header-image {
 
 .section-header-image{
   filter: blur(2px);
+  max-height: 20em;
   width: 100%;
+  object-fit: cover;
 }
 
 /* FIND LOCAL FOOD BANKS*/ 
@@ -180,17 +182,24 @@ body, .section-header-image {
   display: flex;
   flex-direction: column;
 }
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
 .fact-box {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  gap: 10px;
+  margin: 20px 10%;
 }
 
 .child-hunger-facts-container #fact-box-middle {
   flex-direction: row-reverse;
 }
-
 
 .fact-box-list {
   max-width: 60%;
