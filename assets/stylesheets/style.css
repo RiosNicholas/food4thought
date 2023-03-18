@@ -21,6 +21,7 @@ a:link, a:visited{
 }
 
 a:hover, a:active {
+  color: #ededed;
   text-decoration: none;
 }
 
@@ -34,16 +35,30 @@ button {
 /* NAV */
 nav {
   display: flex;
-  font-size: 13px;
+  justify-content: space-around;
+  font-size: 12px;
   align-items: center;
   background-color: #B1BCAD;
   padding: 0px 12px;
 }
 
-.nav-list ul{
+.nav-list ul {
   display: flex;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
   list-style-type: none;
   text-transform: uppercase;
+}
+
+.nav-list a:link, a:visited{
+  color: #232323;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: #ededed;
+  text-decoration: none;
 }
 
 
@@ -188,5 +203,6 @@ footer {
   margin-top: 50px;
   min-height: 2vh;
   text-align: center;
+  font-size: small;
   background-color: #C8D6C3;
 }
