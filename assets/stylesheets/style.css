@@ -114,32 +114,35 @@ a:hover, a:active {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
+/* SECTION HEADER CONTAINER */
 
+.section-header-container {
+  display: relative;
+  text-align: center;
+}
 
-/* FIND LOCAL FOOD BANKS*/ 
 .section-title {
   text-transform: uppercase;
   font-family: 'Bebas Neue';
   font-style: normal;
   font-weight: 400;
   font-size: 80px;
-
   color: #FFFFFF;
-
   -webkit-text-stroke: 1px #A79AB7;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.4);
 }
-
 
 body, .section-header-image {
   padding: 0px;
 }
 
-.section-header-image {
+.section-header-image{
   filter: blur(2px);
   width: 100%;
 }
 
+/* FIND LOCAL FOOD BANKS*/ 
 
 /* FOOD BANK TOOL*/
 .food-bank-tool-wrapper {
@@ -177,24 +180,27 @@ body, .section-header-image {
   display: flex;
   flex-direction: column;
 }
-.fact-box-top {
+.fact-box {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
 }
-.fact-box-middle {
-  display: flex;
+
+.child-hunger-facts-container #fact-box-middle {
   flex-direction: row-reverse;
 }
-.fact-box-bottom {
-  display: flex;
-  flex-direction: row;
-}
+
 
 .fact-box-list {
   max-width: 60%;
   max-height: 150px;
   padding: 15px;
   background: rgba(255, 255, 255, 0.75);  border-radius: 20px;
+}
+
+.fact-box-img {
+  max-height: 150px;
 }
 
 footer {
