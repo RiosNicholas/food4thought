@@ -2,17 +2,18 @@ html {
   height: 100%;
   width: 100%;
 }
+
+body {
+  font-family: Helvetica, Arial, sans-serif;  
+  padding: 20px 20px;
+  margin: 0;
+  background-color: #B7CAB1;
+}
 /*
 html, body {
   background: linear-gradient(180deg, #A79AB7 0%, #C0BACA 11.98%, #EBEFE9 49.48%, #C8D6C3 87.5%, #B7CAB1 100%);
 }
 */
-
-body {
-  font-family: Helvetica, Arial, sans-serif;  
-  padding: 20px 20px;
-  background-color: #B7CAB1;
-}
 
 a:link, a:visited{
   color: black;
@@ -29,6 +30,22 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* NAV */
+nav {
+  display: flex;
+  font-size: 13px;
+  align-items: center;
+  background-color: #B1BCAD;
+  padding: 0px 12px;
+}
+
+.nav-list ul{
+  display: flex;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
 
 
 /* HERO */
