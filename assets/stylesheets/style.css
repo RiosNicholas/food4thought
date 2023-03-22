@@ -44,6 +44,9 @@ nav {
   align-items: center;
   background-color: #B1BCAD;
   padding: 0px 12px;
+  top: 0;
+  width: 100%;
+  position: fixed;
 }
 
 .nav-list ul {
