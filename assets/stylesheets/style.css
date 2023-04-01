@@ -282,14 +282,14 @@ footer {
 /* Add style to button */
 #theme-button {
   font-size: 12px;
-  background-color: #15191d;
+  background-color: #282828;
   color: white;
   font-weight: 600;
   padding: 5px 8px;
 }
 
 #theme-button:hover {
-  background-color:#242b31;;
+  background-color:#3c3836;;
 }
 
 
@@ -315,4 +315,7 @@ footer {
 .dark-mode #theme-button {
   background-color: #9bac95;
 
+}
+.dark-mode #theme-button:hover {
+  background-color: #B1BCAD;;
 }
