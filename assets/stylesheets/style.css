@@ -304,11 +304,11 @@ footer {
 .dark-mode .nav-header {
   color: #8ec07c;
 }
-.dark-mode a:link, a:visited{
+.dark-mode a:link, .dark-mode a:visited{
   color: #ededed;
   text-decoration: none;
 }
-.dark-mode a:hover, a:active {
+.dark-mode a:hover, .dark-mode a:active {
   color: #fabd2f;
   text-decoration: none;
 }
