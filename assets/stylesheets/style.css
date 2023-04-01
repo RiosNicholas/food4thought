@@ -222,18 +222,22 @@ body, .section-header-image {
 .petition-paragraph-wrapper {
   display: flex;
   gap: 20px;
+  margin-bottom: 10px;
 }
 .petition-paragraph {
   width: 40%;
+  flex-grow: 1;
   padding-right: 10px;
 }
 .signatures {
   width: 60%;
+  flex-grow: 1;
   padding-right: 10px;
   font-style: italic;
 }
 .form-wrapper {
   display: flex;
+  color:#282828;
   justify-content: center;
 }
 
