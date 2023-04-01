@@ -295,6 +295,24 @@ footer {
 
 /* Customize Dark Mode Theme */
 .dark-mode {
-  background-color:#15191d;
+  background-color:#3c3836;
   color: white;
+}
+.dark-mode nav, .dark-mode footer{
+  background-color: #282828;
+}
+.dark-mode .nav-header {
+  color: #8ec07c;
+}
+.dark-mode a:link, a:visited{
+  color: #ededed;
+  text-decoration: none;
+}
+.dark-mode a:hover, a:active {
+  color: #fabd2f;
+  text-decoration: none;
+}
+.dark-mode #theme-button {
+  background-color: #9bac95;
+
 }
