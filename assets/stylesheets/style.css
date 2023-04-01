@@ -200,6 +200,7 @@ body, .section-header-image {
 /* Petition Section*/
 .petition{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 50px 10px 10px;
 }
 .petition input {
   /* display: block; */
@@ -213,7 +214,7 @@ body, .section-header-image {
 }
 .petition-header {
   font-size: 25px;
-  margin: 40px 0px 0px;
+  margin: 0;
 }
 .petition-paragraph {
   width: 40%;
