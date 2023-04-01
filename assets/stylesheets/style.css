@@ -207,7 +207,6 @@ body, .section-header-image {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 50px 10px 10px;
   background-color: #bfcbbada;
-
   padding: 20px 60px 30px;
 }
 .petition label { 
@@ -347,6 +346,13 @@ footer {
 
 .dark-mode .support-our-future-container {
   background-color: #7c6f64;
+}
+.dark-mode .petition {
+  background-color: #928374;
+}
+.dark-mode .petition label {
+  color: #fabd2f;
+  text-shadow: 0 0 3px #282828;
 }
 
 .dark-mode .tool-section-left {
