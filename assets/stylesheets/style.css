@@ -190,6 +190,8 @@ body, .section-header-image {
   font-weight: bolder;
   margin-bottom: 0;
   text-align: center;
+  text-shadow: 0px 4px 4px rgba(119, 119, 119, 0.371); 
+
 }
 .article-description-wrapper {
   font-size: 18px;
@@ -215,6 +217,7 @@ body, .section-header-image {
 .petition-header {
   font-size: 25px;
   margin: 0;
+  text-align: center;
 }
 .petition-paragraph {
   width: 40%;
