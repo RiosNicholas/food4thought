@@ -24,6 +24,18 @@ themeButton.addEventListener("click", toggleDarkMode);
 const addSignature = () => {
     let name = document.getElementById('form-name').value;
     let location = document.getElementById('form-location').value;
-    Event.preventDefault();
+    let signNowButton = querySelector("#sign-now-button")
+    
+    const signature = document.createElement("p");
+    const signatureText = "🖊️" + name + " from " + location + " is getting involved.";
+    signature.textContent = signatureText;
+
+    const signaturesSection = document.querySelector(".signatures");
+    signaturesSection.appendChild(signature);
+
+    event.preventDefault();
 }
-form.addEventListener('submit', addSignature);
+signNowButton.addEventListener('submit', addSignature);
+
+
+// the function above doesn't work as intended
