@@ -45,7 +45,7 @@ nav {
   background-color: #B1BCAD;
   padding: 0px 12px;
   top: 0;
-  width: 100%;
+  max-width: 100%;
   position: sticky;
 }
 .nav-list button {
