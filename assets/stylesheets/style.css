@@ -208,6 +208,10 @@ body, .section-header-image {
   width: 100%;
   padding-bottom: 30px;
 }
+.petition-header {
+  font-size: 25px;
+  margin: 40px 0px 0px;
+}
 .petition-paragraph {
   width: 40%;
   padding-right: 10px;
@@ -215,6 +219,7 @@ body, .section-header-image {
 .signatures {
   width: 60%;
   padding-right: 10px;
+  font-style: italic;
 }
 .form-wrapper {
   display: flex;
