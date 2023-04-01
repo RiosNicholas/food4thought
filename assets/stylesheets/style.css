@@ -5,9 +5,8 @@ html {
 
 body {
   font-family: Helvetica, Arial, sans-serif;  
-  padding: 20px 20px;
-  margin: 0;
   background-color: #B7CAB1;
+  
 }
 /*
 html, body {
@@ -203,15 +202,16 @@ body, .section-header-image {
 .petition{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 50px 10px 10px;
+  background-color: #C4D3BE;
+  padding: 10px;
 }
-.petition input {
-  /* display: block; */
+.petition label { 
+  font-weight: 600;
 }
 .petition-container {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  width: 100%;
   padding-bottom: 30px;
 }
 .petition-header {
@@ -274,6 +274,7 @@ footer {
   flex-direction: column;
   margin-top: 50px;
   min-height: 2vh;
+  width: 100%;
   text-align: center;
   font-size: small;
   background-color: #C8D6C3;
@@ -294,7 +295,7 @@ footer {
 }
 
 
-/* Customize Dark Mode Theme */
+/* DARK MODE THEME */
 .dark-mode {
   background-color:#3c3836;
   color: white;

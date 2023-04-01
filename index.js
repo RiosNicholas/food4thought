@@ -26,4 +26,4 @@ const addSignature = () => {
     let location = document.getElementById('form-location').value;
     Event.preventDefault();
 }
-form.addEventListener('submit', printSong);
+form.addEventListener('submit', addSignature);
