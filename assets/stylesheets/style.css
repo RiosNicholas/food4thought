@@ -198,6 +198,9 @@ body, .section-header-image {
 }
 
 /* Petition Section*/
+.petition{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .petition input {
   /* display: block; */
 }
