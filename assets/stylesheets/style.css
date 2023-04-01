@@ -17,7 +17,7 @@ html, body {
 
 a:link{
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:visited {
@@ -192,10 +192,32 @@ body, .section-header-image {
   text-align: center;
 }
 .article-description-wrapper {
-  font-size: 20px;
+  font-size: 18px;
   margin: 20px;
 
 }
+
+/* Petition Section*/
+.petition input {
+  /* display: block; */
+}
+.petition-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 30px;
+}
+.petition-paragraph {
+  width: 40%;
+  padding-right: 10px;
+}
+.signatures {
+  width: 60%;
+  padding-right: 10px;
+}
+
 
 
 /* CHILD HUNGER FACTS */
