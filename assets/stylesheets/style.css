@@ -163,7 +163,6 @@ body, .section-header-image {
 }
 
 /* FIND LOCAL FOOD BANKS*/ 
-
 /* FOOD BANK TOOL*/
 #find-food-banks-header {
   position: relative;
@@ -183,7 +182,7 @@ body, .section-header-image {
 .tool-section-left, .tool-section-right {
   display: flex;
   justify-content: center;
-  padding: 20px 0px;
+  padding: 40px 20px;
   width: 50%;
 }
 .tool-section-left {
