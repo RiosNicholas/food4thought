@@ -369,14 +369,21 @@ footer {
   color: #fabd2f;
   text-shadow: 0 0 5px #282828;
 }
-
 .dark-mode .petition-header {
   color: #ebdbb2;
   text-shadow: 0 0 5px #282828;
 }
-
 .dark-mode .fact-box-list {
   background-color: #83a589;
   color: #fbf1c7;
   font-weight: 500;
+}
+
+
+/* FORM VALIDATION */
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background:pink;
 }

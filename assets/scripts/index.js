@@ -16,18 +16,18 @@ const toggleDarkMode = () => {
     }
 }
 // Registers a 'click' event listener for the theme button with toggleDarkMode as the callback function.
-themeButton.addEventListener("click", toggleDarkMode);
+// themeButton.addEventListener("click", toggleDarkMode);
 
 
 
 /* PETITION */
-const addSignature = () => {
+const addSignature = (event) => {
     let name = document.getElementById('form-name').value;
     let location = document.getElementById('form-location').value;
     let signNowButton = querySelector("#sign-now-button")
     
     const signature = document.createElement("p");
-    const signatureText = "🖊️" + name + " from " + location + " is getting involved.";
+    const signatureText = `🖊️ ${name} from ${location} is getting involved.`;
     signature.textContent = signatureText;
 
     const signaturesSection = document.querySelector(".signatures");
@@ -35,36 +35,35 @@ const addSignature = () => {
 
     event.preventDefault();
 }
-signNowButton.addEventListener('submit', addSignature);
-
-// Use the DOM method `.getElementById()` to find your form
-const form = document.getElementById("myForm")
-// 
-
-const validateForm = (event) => {
-  // This will get
-  let elements = document.getElementById("sign-petition").elements;
-  
-  for (let i = 0; i < elements.length; i++) {
-    // Check if the input is empty
-    if (elements[i].value == "") {
-      console.log("This input is empty!");
-       alert("You did not enter a value for" + elements[i].id  + ". Please try again.");
-    } else {
-      console.log("This input has some data");
-      // Print out each element in the elements array
-      console.log(elements[i].value);
-    }
-  }
-  // Prevents redirect
-  event.preventDefault();
-}
-
-// Add the an event listener to validate your form
-form.addEventListener('submit', validateForm);
-
-
+// signNowButton.addEventListener('submit', addSignature);
 // the function above doesn't work as intended
 
 
 
+/* FORM VALIDATION*/
+const validateForm = () => {
+  let containsErrors = false;
+  var petitionInputs = document.getElementById("sign-petition").elements;
+  
+  // Loop through all inputs and validate the value of each input
+  for (let i = 0; i < petitionInputs.length; i++) {
+    if (petitionInputs[i].value.length < 2) {
+      petitionInputs[i].classList.add('error');
+      containsErrors = true;
+    } else {
+      petitionInputs[i].classList.remove('error');
+    }
+  }
+
+
+  // TODO: Call addSignature() and clear fields if no errors
+  if (containsErrors == false) {
+    addSignature();
+    for (let i = 0; i < petitionInputs.length; i++) {
+      petitionInputs[i].value = "";
+      containsErrors = false;
+    }
+  }
+  event.preventDefault();
+}
+signNowButton.addEventListener('click', validateForm);
