@@ -40,7 +40,7 @@ const addSignature = () => {
 
 
 
-/* FORM VALIDATION*/
+/* FORM VALIDATION */
 const validateForm = () => {
   let containsErrors = false;
   var petitionInputs = document.getElementById("sign-petition").elements;
@@ -54,9 +54,7 @@ const validateForm = () => {
       petitionInputs[i].classList.remove('error');
     }
   }
-
-
-  // TODO: Call addSignature() and clear fields if no errors
+  // Calls addSignature() and clears fields if no errors are found
   if (containsErrors == false) {
     addSignature();
     for (let i = 0; i < petitionInputs.length; i++) {
@@ -68,11 +66,19 @@ const validateForm = () => {
 }
 signNowButton.addEventListener('click', validateForm);
 
+/* HERO BUTTONS  */
+// const buttons = document.querySelectorAll('.hero-buttons button');
+// buttons.forEach(function(button) {
+//   if (button.classList.contains('hero-button-left')) {
+//     button.addEventListener('click', function(event) {
+//       event.preventDefault();
+//       const target = document.querySelector('#child-hunger-usa-container-nav');
+//       target.scrollIntoView({ behavior: 'smooth' });
+//     });
+//   } else if (button.classList.contains('hero-button-right')) {
+//     button.addEventListener('click', function(event) {
+//       window.location.href = '#food-bank-section-title';
+//     });
+//   }
+// });
 
-const heroButtons = document.querySelectorAll('.hero-buttons button');
-
-heroButtons.addEventListener('click', function(event) {
-  event.preventDefault();
-  const targetElement = document.querySelector(this.getAttribute('href'));
-  targetElement.scrollIntoView({ behavior: 'smooth' });
-})
