@@ -67,3 +67,12 @@ const validateForm = () => {
   event.preventDefault();
 }
 signNowButton.addEventListener('click', validateForm);
+
+
+const heroButtons = document.querySelectorAll('.hero-buttons button');
+
+heroButtons.addEventListener('click', function(event) {
+  event.preventDefault();
+  const targetElement = document.querySelector(this.getAttribute('href'));
+  targetElement.scrollIntoView({ behavior: 'smooth' });
+})
