@@ -21,7 +21,7 @@ const toggleDarkMode = () => {
 
 
 /* PETITION */
-const addSignature = (event) => {
+const addSignature = () => {
     let name = document.getElementById('form-name').value;
     let location = document.getElementById('form-location').value;
     let signNowButton = querySelector("#sign-now-button")

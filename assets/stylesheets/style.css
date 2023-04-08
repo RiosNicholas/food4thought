@@ -208,11 +208,11 @@ body, .section-header-image {
   margin: 50px 10px 10px;
   background-color: #bfcbbada;
   padding: 20px 60px 30px;
+  border-radius: 10px;
 }
 .petition label { 
   font-weight: 600;
 }
-
 .petition-header {
   font-size: 25px;
   margin: 0;
