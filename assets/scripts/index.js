@@ -21,22 +21,20 @@ themeButton.addEventListener("click", toggleDarkMode);
 
 
 /* PETITION */
-const addSignature = () => {
+const form = document.querySelector('#sign-petition');
+const signatureList = document.querySelector('#signature-list');
+
+const addSignature = (event) => {
+  event.preventDefault();
   let name = document.getElementById('form-name').value;
   let location = document.getElementById('form-location').value;
-  let signNowButton = querySelector("#sign-now-button")
+  let signNowButton = document.querySelector("#sign-now-button")
   
-  const signature = document.createElement("p");
   const signatureText = `🖊️ ${name} from ${location} is getting involved.`;
-  signature.textContent = signatureText;
-
-  const signaturesSection = document.querySelector(".signatures");
-  signaturesSection.appendChild(signature);
-
-  event.preventDefault();
+  const signature = document.createElement("p");
+  signature.innerText = signatureText;
+  signatureList.appendChild(signatureText);
 }
-// signNowButton.addEventListener('submit', addSignature);
-// the function above doesn't work as intended
 
 
 
@@ -62,23 +60,6 @@ const validateForm = () => {
       containsErrors = false;
     }
   }
-  event.preventDefault();
 }
 signNowButton.addEventListener('click', validateForm);
-
-/* HERO BUTTONS  */
-// const buttons = document.querySelectorAll('.hero-buttons button');
-// buttons.forEach(function(button) {
-//   if (button.classList.contains('hero-button-left')) {
-//     button.addEventListener('click', function(event) {
-//       event.preventDefault();
-//       const target = document.querySelector('#child-hunger-usa-container-nav');
-//       target.scrollIntoView({ behavior: 'smooth' });
-//     });
-//   } else if (button.classList.contains('hero-button-right')) {
-//     button.addEventListener('click', function(event) {
-//       window.location.href = '#food-bank-section-title';
-//     });
-//   }
-// });
 
