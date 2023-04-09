@@ -19,24 +19,21 @@ const toggleDarkMode = () => {
 themeButton.addEventListener("click", toggleDarkMode);
 
 
-
 /* PETITION */
 const form = document.querySelector('#sign-petition');
 const signatureList = document.querySelector('#signature-list');
+const signNowButton = document.querySelector("#sign-now-button");
 
 const addSignature = (event) => {
   event.preventDefault();
   let name = document.getElementById('form-name').value;
   let location = document.getElementById('form-location').value;
-  let signNowButton = document.querySelector("#sign-now-button")
   
   const signatureText = `🖊️ ${name} from ${location} is getting involved.`;
   const signature = document.createElement("p");
   signature.innerText = signatureText;
-  signatureList.appendChild(signatureText);
+  signatureList.appendChild(signature);
 }
-
-
 
 /* FORM VALIDATION */
 const validateForm = () => {
@@ -59,7 +56,8 @@ const validateForm = () => {
       petitionInputs[i].value = "";
       containsErrors = false;
     }
+    return false; // prevent default form submission behavior
   }
 }
-signNowButton.addEventListener('click', validateForm);
 
+signNowButton.addEventListener('click', validateForm);
