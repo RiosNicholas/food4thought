@@ -273,11 +273,6 @@ body, .section-header-image {
   flex-direction: column;
 }
 
-.video-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 10px;
-}
 .fact-box {
   display: flex;
   justify-content: center;
@@ -292,9 +287,9 @@ body, .section-header-image {
 }
 
 .fact-box-list {
-  max-width: 60%;
-  max-height: 150px;
-  padding: 15px;
+  width: 60%;
+  height: 30%;
+  padding: 15px 35px 15px 15px;
   background: rgba(255, 255, 255, 0.75);  
   border-radius: 20px;
 }
@@ -303,6 +298,11 @@ body, .section-header-image {
   max-height: 150px;
 }
 
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
 footer {
   display: flex;
   flex-direction: column;
