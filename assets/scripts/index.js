@@ -42,7 +42,10 @@ const validateForm = () => {
   
   // Loop through all inputs and validate the value of each input
   for (let i = 0; i < petitionInputs.length; i++) {
-    if (petitionInputs[i].value.length < 2) {
+    if (petitionInputs[i].value.trim() === '') {
+      petitionInputs[i].classList.add('error');
+      containsErrors = true;
+    } else if (petitionInputs[i].value.length < 2){
       petitionInputs[i].classList.add('error');
       containsErrors = true;
     } else {
@@ -57,6 +60,14 @@ const validateForm = () => {
       containsErrors = false;
     }
     return false; // prevent default form submission behavior
+  }
+  
+  const email = document.getElementById('email');
+  if (!email.value.includes('@')) {
+    email.classList.add('error');
+    containsErrors = true; 
+  } else {
+    email.classList.remove('error');
   }
 }
 
