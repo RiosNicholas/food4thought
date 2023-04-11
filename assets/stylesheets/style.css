@@ -50,12 +50,13 @@ nav {
   position: sticky;
 
 }
+
 .nav-list ul {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 50px;
   gap: 2em;
-  margin: 0;
   padding: 0;
   font-weight: 600;
   list-style-type: none;
