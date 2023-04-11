@@ -26,7 +26,7 @@ const signNowButton = document.querySelector("#sign-now-button");
 
 const addSignature = (event) => {
   event.preventDefault();
-  
+
   let name = document.getElementById('form-name').value;
   let location = document.getElementById('form-location').value;
   
@@ -35,7 +35,6 @@ const addSignature = (event) => {
   signature.innerText = signatureText;
   signatureList.appendChild(signature);
 }
-
 
 form.addEventListener('submit', addSignature);
 
