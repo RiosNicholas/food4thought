@@ -48,14 +48,14 @@ nav {
   top: 0;
   max-width: 100%;
   position: sticky;
-
+  height: 15%;
 }
 
 .nav-list ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 15%;
   gap: 2em;
   padding: 0;
   font-weight: 600;
