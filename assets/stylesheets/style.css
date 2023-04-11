@@ -40,6 +40,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  text-align: center;
   font-size: 12px;
   align-items: center;
   background-color: #B1BCAD;
@@ -49,14 +50,10 @@ nav {
   position: sticky;
 
 }
-.nav-list button {
-  display: flex;
-  align-items: center;
-}
-
 .nav-list ul {
   display: flex;
   align-items: center;
+  height: 50px;
   gap: 2em;
   margin: 0;
   padding: 0;
@@ -64,7 +61,6 @@ nav {
   list-style-type: none;
   text-transform: uppercase;
 }
-
 .nav-list a:link, a:visited{
   color: #232323;
   text-decoration: none;
@@ -72,6 +68,21 @@ nav {
 .nav-list a:hover, a:active {
   color: #ededed;
   text-decoration: none;
+}
+
+/* Add style to theme button */
+#theme-button {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  background-color: #3c3836;
+  color: white;
+  font-weight: 600;
+  padding: 5px 8px;
+}
+
+#theme-button:hover {
+  background-color:#282828;
 }
 
 
@@ -313,21 +324,6 @@ footer {
   font-size: small;
   background-color: #C8D6C3;
 }
-
-
-/* Add style to button */
-#theme-button {
-  font-size: 12px;
-  background-color: #3c3836;
-  color: white;
-  font-weight: 600;
-  padding: 5px 8px;
-}
-
-#theme-button:hover {
-  background-color:#282828;
-}
-
 
 /* DARK MODE THEME */
 .dark-mode {
