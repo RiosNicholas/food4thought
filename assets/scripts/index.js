@@ -21,11 +21,10 @@ themeButton.addEventListener("click", toggleDarkMode);
 
 /* PETITION */
 const form = document.querySelector('#sign-petition');
-const signatureList = document.querySelector('#signature-list');
+const signatureList = document.querySelector('#signatures');
 const signNowButton = document.querySelector("#sign-now-button");
 
 const addSignature = (event) => {
-  event.preventDefault();
   let name = document.getElementById('form-name').value;
   let location = document.getElementById('form-location').value;
   
@@ -36,30 +35,18 @@ const addSignature = (event) => {
 }
 
 /* FORM VALIDATION */
-const validateForm = () => {
+const validateForm = (event) => {
   let containsErrors = false;
   var petitionInputs = document.getElementById("sign-petition").elements;
   
   // Loop through all inputs and validate the value of each input
   for (let i = 0; i < petitionInputs.length; i++) {
-    if (petitionInputs[i].value.trim() === '') {
-      petitionInputs[i].classList.add('error');
-      containsErrors = true;
-    } else if (petitionInputs[i].value.length < 2){
+    if (petitionInputs[i].value.length < 2){
       petitionInputs[i].classList.add('error');
       containsErrors = true;
     } else {
       petitionInputs[i].classList.remove('error');
     }
-  }
-  // Calls addSignature() and clears fields if no errors are found
-  if (containsErrors == false) {
-    addSignature(event);
-    for (let i = 0; i < petitionInputs.length; i++) {
-      petitionInputs[i].value = "";
-      containsErrors = false;
-    }
-    return false; // prevent default form submission behavior
   }
   
   const email = document.getElementById('email');
@@ -69,6 +56,16 @@ const validateForm = () => {
   } else {
     email.classList.remove('error');
   }
-}
 
+  // Calls addSignature() and clears fields if no errors are found
+  if (containsErrors == false) {
+    addSignature(event);
+    for (let i = 0; i < petitionInputs.length; i++) {
+      petitionInputs[i].value = "";
+    }
+    event.preventDefault();
+  }
+}
 signNowButton.addEventListener('click', validateForm);
+
+

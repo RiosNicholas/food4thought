@@ -5,14 +5,13 @@ html {
 
 body {
   font-family: Helvetica, Arial, sans-serif;  
-  background-color: #B7CAB1;
-  
-}
-/*
-html, body {
   background: linear-gradient(180deg, #A79AB7 0%, #C0BACA 11.98%, #EBEFE9 49.48%, #C8D6C3 87.5%, #B7CAB1 100%);
 }
-*/
+
+html {
+  background: linear-gradient(180deg, #A79AB7 0%, #C0BACA 11.98%, #EBEFE9 49.48%, #C8D6C3 87.5%, #B7CAB1 100%);
+}
+
 
 a:link{
   color: black;
@@ -43,7 +42,8 @@ nav {
   text-align: center;
   font-size: 12px;
   align-items: center;
-  background-color: #B1BCAD;
+  background-color: #A79AB7;
+  /* background-color: #B1BCAD; */
   padding: 0px 12px;
   top: 0;
   max-width: 100%;
@@ -326,8 +326,9 @@ footer {
 }
 
 /* DARK MODE THEME */
-.dark-mode {
-  background-color:#3c3836;
+.dark-mode, .dark-mode body{
+  /* background-color:#3c3836; */
+  background:#3c3836;
   color: white;
 }
 .dark-mode nav, .dark-mode footer{
@@ -401,7 +402,6 @@ footer {
   color: #fbf1c7;
   font-weight: 500;
 }
-
 
 /* FORM VALIDATION */
 .error {
