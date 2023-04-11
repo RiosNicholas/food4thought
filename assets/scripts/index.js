@@ -51,7 +51,7 @@ const validateForm = () => {
   }
   // Calls addSignature() and clears fields if no errors are found
   if (containsErrors == false) {
-    addSignature();
+    addSignature(event);
     for (let i = 0; i < petitionInputs.length; i++) {
       petitionInputs[i].value = "";
       containsErrors = false;
