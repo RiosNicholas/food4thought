@@ -20,7 +20,7 @@ themeButton.addEventListener("click", toggleDarkMode);
 
 
 /* PETITION */
-const form = document.querySelector('#sign-petition');
+// const form = document.querySelector('#sign-petition');
 const signatureList = document.querySelector('#signatures');
 const signNowButton = document.querySelector("#sign-now-button");
 
@@ -41,25 +41,26 @@ const addSignature = (event) => {
 const validateForm = (event) => {
   event.preventDefault();
   let containsErrors = false;
-  var petitionInputs = document.getElementById('sign-petition').elements;
+  let petitionInputs = document.querySelectorAll('#sign-petition input:not([type="submit"])');
   
   // Loop through all inputs and validate the value of each input
   for (let i = 0; i < petitionInputs.length; i++) {
-    if (petitionInputs[i].value.length < 2) {
+    if (petitionInputs[i].value.length < 2 || petitionInputs.value == 0) {
       petitionInputs[i].classList.add('error');
       containsErrors = true;
     } else {
       petitionInputs[i].classList.remove('error');
+      console.log("hi")
     }
   }
   
-  // const email = document.getElementById('email');
-  // if (!email.value.includes('@')) {
-  //   email.classList.add('error');
-  //   containsErrors = true; 
-  // } else {
-  //   email.classList.remove('error');
-  // }
+  const email = document.getElementById('form-email');
+  if (!email.value.includes('@')) {
+    email.classList.add('error');
+    containsErrors = true; 
+  } else {
+    email.classList.remove('error');
+  }
 
   // Calls addSignature() and clears fields if no errors are found
   if (!containsErrors) {
