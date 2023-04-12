@@ -252,14 +252,11 @@ body, .section-header-image {
   margin-bottom: 10px;
 }
 .petition-paragraph {
-  width: 30%;
-  height: 20vh;
-  flex: 1;
+  width: 70%;
   padding-right: 10px;
 }
 .signatures {
-  width: 60%;
-  flex: 1;
+  width: 30%;
   padding-right: 10px;
   font-style: italic;
 }

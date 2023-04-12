@@ -45,7 +45,7 @@ const validateForm = (event) => {
   
   // Loop through all inputs and validate the value of each input
   for (let i = 0; i < petitionInputs.length; i++) {
-    if (petitionInputs[i].value.length < 2){
+    if (petitionInputs[i].value.length < 2) {
       petitionInputs[i].classList.add('error');
       containsErrors = true;
     } else {
@@ -71,4 +71,3 @@ const validateForm = (event) => {
   }
 }
 signNowButton.addEventListener('click', validateForm);
-
