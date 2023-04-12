@@ -41,7 +41,7 @@ const addSignature = (event) => {
 const validateForm = (event) => {
   event.preventDefault();
   let containsErrors = false;
-  var petitionInputs = document.getElementById("sign-petition").elements;
+  var petitionInputs = document.getElementById('sign-petition').elements;
   
   // Loop through all inputs and validate the value of each input
   for (let i = 0; i < petitionInputs.length; i++) {
@@ -53,23 +53,22 @@ const validateForm = (event) => {
     }
   }
   
-  const email = document.getElementById('email');
-  if (!email.value.includes('@')) {
-    email.classList.add('error');
-    containsErrors = true; 
-  } else {
-    email.classList.remove('error');
-  }
+  // const email = document.getElementById('email');
+  // if (!email.value.includes('@')) {
+  //   email.classList.add('error');
+  //   containsErrors = true; 
+  // } else {
+  //   email.classList.remove('error');
+  // }
 
   // Calls addSignature() and clears fields if no errors are found
-  if (containsErrors == false) {
-    addSignature();
+  if (!containsErrors) {
+    addSignature(event);
     for (let i = 0; i < petitionInputs.length; i++) {
       petitionInputs[i].value = "";
       containsErrors = false;
     }
   }
 }
-signNowButton.addEventListener('submit', validateForm);
-
+signNowButton.addEventListener('click', validateForm);
 
