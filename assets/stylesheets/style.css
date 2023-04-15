@@ -46,6 +46,7 @@ nav {
   max-width: 100%;
   position: sticky;
   height: 15%;
+  z-index: 1;
 }
 
 .nav-list ul {
@@ -437,7 +438,7 @@ footer {
 
 .revealable {
   position: relative;
-  transform: translateY(150px);
+  transform: translateY(75px);
   opacity: 0;
   transition: all 1s ease;
 }

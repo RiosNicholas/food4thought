@@ -76,7 +76,7 @@ signNowButton.addEventListener('click', validateForm);
 
 /* ANIMATIONS */
 let animation = {
-  revealDistance: 150,
+  revealDistance: 75,
   initialOpacity: 0,
   transitionDelay: 0,
   transitionDuration: '1s',
@@ -91,7 +91,7 @@ const reveal = () => {
     // Get the distance from top of the current revealable container to top of the viewport
     let topOfRevealableContainer = revealableContainers[i].getBoundingClientRect().top;
     
-    // If top of revealable container less than animation revealable distance (150), div becomes active
+    // If top of revealable container less than animation revealable distance (75), div becomes active
     if (topOfRevealableContainer < window.innerHeight - animation.revealDistance) {
       revealableContainers[i].classList.add('active');
     } else {
@@ -99,5 +99,7 @@ const reveal = () => {
     }
   }
 };
-
 window.addEventListener('scroll', reveal);
+
+
+/* Reduce motion button */
