@@ -72,3 +72,14 @@ const validateForm = (event) => {
   }
 }
 signNowButton.addEventListener('click', validateForm);
+
+
+/* ANIMATIONS */
+let animation = {
+  revealDistance: 150,
+  initialOpacity: 0,
+  transitionDelay: 0,
+  transitionDelay: '2s',
+  transitionProperty: 'all', 
+  transitionTimingFunction: 'ease'
+};

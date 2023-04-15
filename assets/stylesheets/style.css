@@ -143,24 +143,28 @@ nav {
 
 /* SECTION HEADER CONTAINER */
 .section-header-wrapper {
+  display: flex;
+  position: relative;
   text-align: center;
 }
 
 .section-title {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  width: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-transform: uppercase;
   font-family: 'Bebas Neue';
   font-style: normal;
   font-weight: 400;
-  font-size: 80px;
-  color: #FFFFFF;
+  font-size: 5rem;
+  color: white;
   -webkit-text-stroke: 2px #A79AB7;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
-  background: rgba(0, 0, 0, 0.4);
+  /* background: rgba(0, 0, 0, 0.3); */
   z-index: 1;
+  overflow: hidden;
 }
 
 body, .section-header-image {
@@ -168,12 +172,27 @@ body, .section-header-image {
 }
 
 .section-header-image{
+  position: relative;
+  overflow: hidden;
   filter: blur(2px);
   max-height: 20em;
   width: 100%;
   object-fit: cover;
   z-index: 0;
 }
+.section-header-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1; 
+  mix-blend-mode: color; 
+}
+
+
 
 /* FIND LOCAL FOOD BANKS*/ 
 /* FOOD BANK TOOL*/
