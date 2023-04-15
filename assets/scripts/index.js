@@ -79,7 +79,25 @@ let animation = {
   revealDistance: 150,
   initialOpacity: 0,
   transitionDelay: 0,
-  transitionDelay: '2s',
+  transitionDuration: '1s',
   transitionProperty: 'all', 
   transitionTimingFunction: 'ease'
 };
+
+const revealableContainers = document.querySelectorAll('.revealable');
+
+const reveal = () => {
+  for (let i = 0; i < revealableContainers.length; i++) {
+    // Get the distance from top of the current revealable container to top of the viewport
+    let topOfRevealableContainer = revealableContainers[i].getBoundingClientRect().top;
+    
+    // If top of revealable container less than animation revealable distance (150), div becomes active
+    if (topOfRevealableContainer < window.innerHeight - animation.revealDistance) {
+      revealableContainers[i].classList.add('active');
+    } else {
+      revealableContainers[i].classList.remove('active');
+    }
+  }
+};
+
+window.addEventListener('scroll', reveal);

@@ -3,14 +3,11 @@ html {
   width: 100%;
 }
 
-body {
+body, html {
   font-family: Helvetica, Arial, sans-serif;  
   background: linear-gradient(180deg, #A79AB7 0%, #C0BACA 11.98%, #EBEFE9 49.48%, #C8D6C3 87.5%, #B7CAB1 100%);
 }
 
-html {
-  background: linear-gradient(180deg, #A79AB7 0%, #C0BACA 11.98%, #EBEFE9 49.48%, #C8D6C3 87.5%, #B7CAB1 100%);
-}
 
 
 a:link{
@@ -434,4 +431,17 @@ footer {
   border-width: 2px;
   border-color: red;
   background:pink;
+}
+
+/* ANIMATIONS */
+
+.revealable {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+.active {
+  transform: translateY(0px);
+  opacity: 1;
 }
