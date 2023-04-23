@@ -34,15 +34,17 @@ const addSignature = (event, person) => {
 }
 
 /* FORM VALIDATION */
-const validateForm = (event) => {
-  let person = {
-    name: petitionInputs[0].value // accesses and saves value of first input
-  }
-  
+const validateForm = (event) => { 
   event.preventDefault();
   let containsErrors = false;
   let petitionInputs = document.querySelectorAll('#sign-petition input:not([type="submit"])');
   
+  let person = {
+    name: petitionInputs[0].value, // accesses and saves value of first input
+    location: petitionInputs[1].value,
+    email: petitionInputs[2].value
+  };
+
   // Loop through all inputs and validate the value of each input
   for (let i = 0; i < petitionInputs.length; i++) {
     if (petitionInputs[i].value.length < 2 || petitionInputs.value == 0) {
@@ -64,6 +66,7 @@ const validateForm = (event) => {
   // Calls addSignature() and clears fields if no errors are found
   if (!containsErrors) {
     addSignature(event, person);
+    toggleModal(person);
     for (let i = 0; i < petitionInputs.length; i++) {
       petitionInputs[i].value = "";
       containsErrors = false;
@@ -99,3 +102,16 @@ const reveal = () => {
   }
 };
 window.addEventListener('scroll', reveal);
+
+
+/* FORM MODAL */
+let modal = document.querySelector('#thanks-modal');
+let modalContent = document.querySelector('#thanks-modal-content');
+const toggleModal = (person) => {
+  modal.style.display = "flex"; // making the modal visible
+  modalContent.textContent =`Thank you, ${person.name} for supporting our battle against child hunger!`;
+  
+  setTimeout(() => {
+    modal.style.display = "none";
+  }, 4000) // Hides the modal after 4 seconds
+}

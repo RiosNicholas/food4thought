@@ -447,7 +447,7 @@ footer {
 
 /* FORM MODAL */
 .modal {
-  display: flex; /* hides the modal from view by default*/
+  display: none; /* hides the modal from view by default*/
   position: fixed; /* keeps the modal in one place */
   z-index: 2; /* positions the modal on top of all other elements on the screen */
   left: 0;
