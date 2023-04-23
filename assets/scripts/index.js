@@ -107,11 +107,25 @@ window.addEventListener('scroll', reveal);
 /* FORM MODAL */
 let modal = document.querySelector('#thanks-modal');
 let modalContent = document.querySelector('#thanks-modal-content');
+let modalImg = document.querySelector('#modal-img');
 const toggleModal = (person) => {
   modal.style.display = "flex"; // making the modal visible
   modalContent.textContent =`Thank you, ${person.name} for supporting our battle against child hunger!`;
   
+  let intervalId = setInterval(scaleImage, 500)
   setTimeout(() => {
     modal.style.display = "none";
-  }, 4000) // Hides the modal after 4 seconds
+    clearInterval(intervalId) // stops the animation
+  }, 3000) // Hides the modal after 3.5 seconds
+};
+
+
+// MODAL ANIMATIONS
+let scaleFactor = 1;
+let modalImage; 
+
+const scaleImage = () => {
+  scaleFactor = scaleFactor === 1 ? 0.8 : 1; // flips the value between 0.8 and 1 every time it's called
+
+  modalImg.style.transform = `scale(${scaleFactor})`; // sets the transform style property of the modalImg as a string
 }
