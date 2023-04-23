@@ -190,8 +190,7 @@ body, .section-header-image {
 
 
 
-/* FIND LOCAL FOOD BANKS*/ 
-/* FOOD BANK TOOL*/
+/* FIND LOCAL FOOD BANKS */ 
 #find-food-banks-header {
   position: relative;
 }
@@ -205,13 +204,13 @@ body, .section-header-image {
 
 .food-bank-tool-wrapper {
   display: flex;
-  flex: 1;
+  height: 50vh;
 }
 .tool-section-left, .tool-section-right {
   display: flex;
   justify-content: center;
   padding: 40px 20px;
-  width: 50%;
+  flex: 1;
 }
 .tool-section-left {
   background: #EBEFE9;
@@ -220,7 +219,25 @@ body, .section-header-image {
   background: #D9D9D9;
 }
 
-
+/* FOOD BANK TOOL*/
+#map-container {
+  border: solid #296414 3px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.2);}
+  
+#location-input {
+  width: 45vh;
+  padding: 10px;
+  color: #A3A3A3;
+  font-weight: bold;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+#location-submit {
+  max-width: 5vh;
+  padding: 10px;
+  border-radius: 5px;
+}
 /* SUPPORT OUR FUTURE */
 .support-our-future-container {
   padding:  15px 10%;
@@ -233,7 +250,7 @@ body, .section-header-image {
   margin-bottom: 0;
   text-align: center;
   text-shadow: 0px 4px 4px rgba(119, 119, 119, 0.371); 
-
+  
 }
 .article-description-wrapper {
   font-size: 18px;
@@ -484,7 +501,6 @@ footer {
 }
 
 .modal-button {
-
   display: flex;
   align-items: center;
   justify-content: center;

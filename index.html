@@ -48,8 +48,15 @@
       <img class="section-header-image" id="find-food-banks-header-image"src=assets/images/find-local-food-banks-rectangle.png alt="Mother and child in a grocery store at the produce section.">
     </div>
     <div class="food-bank-tool-wrapper">
-      <div class="tool-section-left" id="map-container">Embedded Map Goes Here</div>
-      <div class="tool-section-right" id="search-map-container">Search Tool Goes Here</div>
+      <div class="tool-section-left">
+        <div id="map-container" style="width: 75%; height: 100%"></div>
+      </div>
+      <div class="tool-section-right" id="search-map-container">
+        <form id="search-form">
+          <input type="text" id="location-input" placeholder="Search By Location">
+          <button id="location-submit" type="submit">🔎</button>
+        </form>        
+      </div>
     </div>
   </section>
   <br>
@@ -158,7 +165,6 @@
         <p id="thanks-modal-content">
           Thank you for supporting our battle against child hunger!
         </p>
-        <!-- button here (stretch feature) -->
         <button class="modal-button">
           Close
         </button>
@@ -176,5 +182,6 @@
     </p>
   </footer>
   <script src="./assets/scripts/index.js"></script>
+  <script src="/assets/scripts/search.js"></script>
 </body>
 </html>
