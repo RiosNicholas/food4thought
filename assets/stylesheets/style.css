@@ -435,7 +435,6 @@ footer {
 }
 
 /* ANIMATIONS */
-
 .revealable {
   position: relative;
   transform: translateY(75px);
@@ -446,3 +445,5 @@ footer {
   transform: translateY(0px);
   opacity: 1;
 }
+
+/* MODAL */
