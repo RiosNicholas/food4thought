@@ -8,6 +8,10 @@
   <link href="assets/stylesheets/style.css" rel="stylesheet" type="text/css" />
   <link href="assets/stylesheets/reset-webview.css" rel="stylesheet" type="text/css"/>
   <link href="assets/images/Food4Thought-Logo-small.png" rel="icon">
+  <!-- HERE Maps API -->
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+
 </head>
 <body>
   <nav>
@@ -44,8 +48,8 @@
       <img class="section-header-image" id="find-food-banks-header-image"src=assets/images/find-local-food-banks-rectangle.png alt="Mother and child in a grocery store at the produce section.">
     </div>
     <div class="food-bank-tool-wrapper">
-      <div class="tool-section-left">Embedded Map Goes Here</div>
-      <div class="tool-section-right">Search Tool Goes Here</div>
+      <div class="tool-section-left" id="map-container">Embedded Map Goes Here</div>
+      <div class="tool-section-right" id="search-map-container">Search Tool Goes Here</div>
     </div>
   </section>
   <br>
