@@ -27,18 +27,18 @@ const signNowButton = document.querySelector("#sign-now-button");
 const addSignature = (event, person) => {
   event.preventDefault();
   
-  // let name = document.getElementById('form-name').value;
-  let location = document.getElementById('form-location').value;
-  
-  const signatureText = `🖊️ ${name} from ${location} is getting involved.`;
+  const signatureText = `🖊️ ${person.name} from ${person.location} is getting involved.`;
   const signature = document.createElement("p");
   signature.innerText = signatureText;
   signatureList.appendChild(signature);
 }
-// signNowButton.addEventListener('click', addSignature);
 
 /* FORM VALIDATION */
 const validateForm = (event) => {
+  let person = {
+    name: petitionInputs[0].value // accesses and saves value of first input
+  }
+  
   event.preventDefault();
   let containsErrors = false;
   let petitionInputs = document.querySelectorAll('#sign-petition input:not([type="submit"])');
@@ -63,7 +63,7 @@ const validateForm = (event) => {
 
   // Calls addSignature() and clears fields if no errors are found
   if (!containsErrors) {
-    addSignature(event);
+    addSignature(event, person);
     for (let i = 0; i < petitionInputs.length; i++) {
       petitionInputs[i].value = "";
       containsErrors = false;
