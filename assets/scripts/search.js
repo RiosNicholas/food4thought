@@ -9,11 +9,10 @@ var defaultLayers = platform.createDefaultLayers();
 
 // Instantiate (and display) a map object:
 const mapContainer = document.querySelector('#map-container');
-const defaultLayers = platform.createDefaultLayers();
 const map = new H.Map(mapContainer, defaultLayers.vector.normal.map, {
-  center: { lat: 0, lng: 0 },
-  zoom: 10
-});
+    center: { lat: 40.7128, lng: -74.0060 }, // Default to NYC
+    zoom: 10
+  });
 
 /* Takes User Input and Search for Food Banks in Area */
 function searchFoodBanks(location) {
@@ -25,7 +24,7 @@ function searchFoodBanks(location) {
       const searchService = platform.getSearchService();
       const params = {
         at: `${latitude},${longitude}`,
-        q: 'food banks',
+        q: 'food bank',
         limit: 10 // searches within 10km
       };
   
