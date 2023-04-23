@@ -99,6 +99,3 @@ const reveal = () => {
   }
 };
 window.addEventListener('scroll', reveal);
-
-
-/* Reduce motion button */
