@@ -472,6 +472,7 @@ footer {
 }
 
 #thanks-modal-content {
+  flex: 1;
   width: 20rem; /* sets a default width for the text container */
 }
 
@@ -482,3 +483,15 @@ footer {
   justify-content: center;
 }
 
+.modal-button {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 8px;
+  background-color: white;
+  color: #434343;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}

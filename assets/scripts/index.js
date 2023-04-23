@@ -108,6 +108,8 @@ window.addEventListener('scroll', reveal);
 let modal = document.querySelector('#thanks-modal');
 let modalContent = document.querySelector('#thanks-modal-content');
 let modalImg = document.querySelector('#modal-img');
+let modalButton = document.querySelector('.modal-button');
+
 const toggleModal = (person) => {
   modal.style.display = "flex"; // making the modal visible
   modalContent.textContent =`Thank you, ${person.name} for supporting our battle against child hunger!`;
@@ -116,8 +118,14 @@ const toggleModal = (person) => {
   setTimeout(() => {
     modal.style.display = "none";
     clearInterval(intervalId) // stops the animation
-  }, 3000) // Hides the modal after 3.5 seconds
+  }, 4000) // Hides the modal after 4 seconds
 };
+
+const closeModal = () => {
+  modal.style.display = "none";
+}
+modalButton.addEventListener('click', closeModal);
+
 
 
 // MODAL ANIMATIONS
@@ -129,3 +137,4 @@ const scaleImage = () => {
 
   modalImg.style.transform = `scale(${scaleFactor})`; // sets the transform style property of the modalImg as a string
 }
+
