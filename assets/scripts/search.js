@@ -8,13 +8,16 @@ var platform = new H.service.Platform ({
 var defaultLayers = platform.createDefaultLayers();
 
 // Instantiate (and display) a map object:
-const mapContainer = document.querySelector('#map-container');
+let mapContainer = document.querySelector('#map-container');
 const map = new H.Map(mapContainer, defaultLayers.vector.normal.map, {
     center: { lat: 40.7128, lng: -74.0060 }, // Default to NYC
     zoom: 10
   });
 
-/* Takes User Input and Search for Food Banks in Area */
+// default ui
+const ui = H.ui.UI.createDefault(map, defaultLayers);
+
+// Takes User Input and Search for Food Banks in Area 
 function searchFoodBanks(location) {
     const geocodingService = platform.getSearchService();
   
@@ -41,14 +44,19 @@ function searchFoodBanks(location) {
       }, console.error);
     }, console.error);
   }
-  
-// Evenet Listener for Searching Map
+
+// Pins Food Banks
+function pinFoodBanks(result) {
+    result.items.forEach((item) => {
+      const marker = new H.map.Marker({
+        lat: item.position[0],
+        lng: item.position[1]
+      });
+      map.addObject(marker);
+    });
+  }  
+// Event Listener for Searching Map
 const form = document.querySelector('#search-form');
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+const locationInput = document.querySelector('#location-input');
+const searchResults = document.querySelector('#search-results');
 
-  const locationInput = document.querySelector('#location-input');
-  const location = locationInput.value;
-
-  searchFoodBanks(location);
-});
