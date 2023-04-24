@@ -204,7 +204,7 @@ body, .section-header-image {
 
 .food-bank-tool-wrapper {
   display: flex;
-  height: 50vh;
+  height: 100%;
 }
 .tool-section-left, .tool-section-right {
   display: flex;
@@ -232,11 +232,53 @@ body, .section-header-image {
   font-weight: bold;
   border: 1px solid #000000;
   border-radius: 5px;
+  margin: 2px 1px;
 }
 #location-submit {
   max-width: 5vh;
   padding: 10px;
+  border: 1px solid #000000;
   border-radius: 5px;
+  margin: 2px 1px;
+}
+
+#search-suggestions {
+  margin: 15px 1px;
+  background-color: white;
+  border: 1px solid #000000;
+  padding: 4px;
+  border-radius: 5px;
+}
+.search-result {
+  list-style: none;   
+  padding: 12px 10px 0px;
+}
+
+.search-result-location {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 1px 1px 6px;
+}
+.search-result-phone {
+  font-size: 12px;
+  margin: 2px 2px;
+
+}
+.search-result-action, .search-result-action a {
+  color: #296414;
+  font-size: 12px;
+  margin: 2px 1px 6px;
+
+}
+.search-result-distance {
+  color: #9B9B9B;
+  font-size: 10px;
+  margin: 2px;
+}
+.search-result-hr {
+  color: #B3B3B3;
+  border: 1px solid;
+  margin: 5px 2px;
 }
 /* SUPPORT OUR FUTURE */
 .support-our-future-container {
