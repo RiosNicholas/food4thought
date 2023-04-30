@@ -10,10 +10,11 @@ import SwiftUI
 struct HabitButton: View {
     @State var chainNum: Int = 0
     @State var habit: String
-    @State var icon: String
-    var backgroundColor : Color
+    @State var emoji: String
+    var goodHabit: Bool
+    // var backgroundColor : Color
     var textColor: Color
-    
+    var gradientColor: [Color]
     
     var body: some View {
         Button(action: {
@@ -25,7 +26,7 @@ struct HabitButton: View {
                 HStack{
                     VStack {
                         // Writes the habit below a representative icon
-                        Text("\(icon)")
+                        Text("\(emoji)")
                             .font(.largeTitle)
                         Text("\(habit)")
                             .font(.body)
@@ -37,25 +38,34 @@ struct HabitButton: View {
                     Text("\(chainNum)")
                         .font(.largeTitle)
                 }
-                .padding(10)
-                .background(backgroundColor)
+                .shadow(color: Color.black, radius: 5, y:3) // Adds a dropshadow to the contents of the button
+                .padding(.horizontal, 20) // Adds horizontal padding of 20 points
+                .padding(.vertical, 10) // Adds vertical padding of 10 points
+                //.background(backgroundColor)
+                .background(LinearGradient(
+                    gradient: Gradient(colors: gradientColor),
+                    startPoint: .bottom,
+                    endPoint: .top)
+                )
                 .foregroundColor(textColor)
                 .cornerRadius(10)
             }
 
         }
-        .shadow(color: Color.black, radius: 4, y: 5)
+        .shadow(color: Color.black.opacity(0.6), radius: 4, y: 5) // Adds a dropshadow to the outside of the button
         .contextMenu {
             // Adding functionality to reset the habit chain
             Button("Reset chain") {
                 chainNum = 0
             }
         }
+        .frame(maxWidth: .infinity)
     }
 }
 
 struct HabitButton_Previews: PreviewProvider {
     static var previews: some View {
-        HabitButton(habit: "Drink water", icon: "💧",backgroundColor: .green, textColor: .white)
+        //HabitButton(habit: "Drink water", icon: "💧",backgroundColor: .green, textColor: .white)
+        HabitButton(habit: "Exercise", emoji: "💪", goodHabit: true, textColor: .white, gradientColor: [.green, .white])
     }
 }

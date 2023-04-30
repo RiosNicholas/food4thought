@@ -6,28 +6,29 @@
 //
 
 import UIKit
+import SwiftUI
 
 struct HabitData: Hashable {
-    var id: Int
     var habit: String
+    var emoji: String
     var goodHabit: Bool
-    var streak: Int
-    var icon: String
-    /*
-    var color: UIColor
-    var green = 1.0
-    var red = 1.0
-    */
+    var textColor: Color {
+        return goodHabit ? Color.white : Color.black
+    }
+    var gradientColor: [Color] {
+        return goodHabit ? [.green, .white] : [.red, .white]
+    }
 }
 
 class DataModel: NSObject {
-    static let data: [HabitData] =  [
-        // HabitData(id: 0, habit: "Early Bedtime", goodHabit: true, streak: 0, icon: "", color: UIColor.green),
-        HabitData(id: 1, habit: "Late Bedtime", goodHabit: false, streak: 0, icon: ""),
-        HabitData(id: 2, habit: "Sugary Foods", goodHabit: false, streak: 0, icon: ""),
-        HabitData(id: 3, habit: "Reading", goodHabit: true, streak: 0, icon: ""),
-        HabitData(id: 4, habit: "Journaling", goodHabit: true, streak: 0, icon: ""),
-        HabitData(id: 5, habit: "Stretching", goodHabit: true, streak: 0, icon: ""),
-        HabitData(id: 6, habit: "Exercise", goodHabit: true, streak: 0, icon: "")
+    static let habits: [HabitData] =  [
+        // HabitData(habit: "Late Bedtime", emoji: "😴", goodHabit: false, textColor: Color.black, gradientColor: [Color.red, Color.white]),
+        HabitData(habit: "Late Bedtime", emoji: "😴", goodHabit: false),
+        HabitData(habit: "Sugary Foods", emoji: "🍩", goodHabit: false),
+        HabitData(habit: "Reading", emoji: "📖", goodHabit: true),
+        HabitData(habit: "Journaling", emoji: "📝", goodHabit: false),
+        HabitData(habit: "Stretching", emoji: "🙆‍♂️", goodHabit: true),
+        HabitData(habit: "Exercise", emoji: "🏋️", goodHabit: true)
     ]
 }
+
