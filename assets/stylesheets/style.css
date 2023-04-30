@@ -1,0 +1,555 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body, html {
+  font-family: Helvetica, Arial, sans-serif;  
+  background: linear-gradient(180deg, #A79AB7 0%, #C0BACA 11.98%, #EBEFE9 49.48%, #C8D6C3 87.5%, #B7CAB1 100%);
+}
+
+
+
+a:link{
+  color: black;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: purple;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: #5a5a5a;
+  text-decoration: underline;
+}
+
+button {
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 12px;
+  align-items: center;
+  background-color: #A79AB7;
+  /* background-color: #B1BCAD; */
+  padding: 0px 12px;
+  top: 0;
+  max-width: 100%;
+  position: sticky;
+  height: 15%;
+  z-index: 1;
+}
+
+.nav-list ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15%;
+  gap: 2em;
+  padding: 0;
+  font-weight: 600;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+.nav-list a:link, a:visited{
+  color: #232323;
+  text-decoration: none;
+}
+.nav-list a:hover, a:active {
+  color: #ededed;
+  text-decoration: none;
+}
+
+/* Add style to theme button */
+#theme-button {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  background-color: #3c3836;
+  color: white;
+  font-weight: 600;
+  padding: 5px 8px;
+}
+
+#theme-button:hover {
+  background-color:#282828;
+}
+
+
+
+/* HERO */
+.hero-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-height: 50%;
+}
+#hero-logo {
+  margin-top: 2%;
+  max-height: 45%;
+  max-width: 45%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+}
+.hero-horizontal-line {
+  margin-top: 5px;
+  width: 60%;
+  height: 3px;
+  background: white;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+}
+.hero-slogan {
+  color: white;
+  padding: 0px 20%;
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  width: 70%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.hero-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 33% 5%;
+  gap: 15px;
+}
+
+.hero-buttons button:hover {
+  background-color: #ededed;
+}
+
+.hero-button-left, .hero-button-right{ 
+  flex:1;
+  padding: 10px 20px;
+  background-color: white;
+  color: #A3A3A3;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* SECTION HEADER CONTAINER */
+.section-header-wrapper {
+  display: flex;
+  position: relative;
+  text-align: center;
+}
+
+.section-title {
+  position: absolute;
+  width: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5rem;
+  color: white;
+  -webkit-text-stroke: 2px #A79AB7;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+  /* background: rgba(0, 0, 0, 0.3); */
+  z-index: 1;
+  overflow: hidden;
+}
+
+body, .section-header-image {
+  padding: 0px;
+}
+
+.section-header-image{
+  position: relative;
+  overflow: hidden;
+  filter: blur(2px);
+  max-height: 20em;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.section-header-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* FIND LOCAL FOOD BANKS */ 
+#find-food-banks-header {
+  position: relative;
+}
+#food-bank-section-title {
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.food-bank-tool-wrapper {
+  display: flex;
+  height: 100%;
+}
+.tool-section-left, .tool-section-right {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  flex: 1;
+}
+.tool-section-left {
+  background: #EBEFE9;
+}
+.tool-section-right {
+  background: #D9D9D9;
+}
+
+/* FOOD BANK TOOL*/
+#map-container {
+  border: solid #296414 3px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.2);}
+  
+#location-input {
+  width: 45vh;
+  padding: 10px;
+  color: #A3A3A3;
+  font-weight: bold;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin: 2px 1px;
+}
+#location-submit {
+  max-width: 5vh;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin: 2px 1px;
+}
+
+#search-suggestions {
+  margin: 15px 1px;
+  background-color: white;
+  border: 1px solid #000000;
+  padding: 4px;
+  border-radius: 5px;
+}
+.search-result {
+  list-style: none;   
+  padding: 12px 10px 0px;
+}
+
+.search-result-location {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 1px 1px 6px;
+}
+.search-result-phone {
+  font-size: 12px;
+  margin: 2px 2px;
+
+}
+.search-result-action, .search-result-action a {
+  color: #296414;
+  font-size: 12px;
+  margin: 2px 1px 6px;
+
+}
+.search-result-distance {
+  color: #9B9B9B;
+  font-size: 10px;
+  margin: 2px;
+}
+.search-result-hr {
+  color: #B3B3B3;
+  border: 1px solid;
+  margin: 5px 2px;
+}
+/* SUPPORT OUR FUTURE */
+.support-our-future-container {
+  padding:  15px 10%;
+  background-color: #B1BCAD;
+  font-size: 15px;
+}
+.support-our-future-header {
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 0;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(119, 119, 119, 0.371); 
+  
+}
+.article-description-wrapper {
+  font-size: 18px;
+  margin: 20px;
+
+}
+
+/* Petition Section*/
+.petition{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 50px 10px 10px;
+  background-color: #bfcbbada;
+  padding: 20px 60px 30px;
+  border-radius: 10px;
+}
+.petition label { 
+  font-weight: 600;
+}
+.petition-header {
+  font-size: 25px;
+  margin: 0;
+  text-align: center;
+}
+.petition-paragraph-wrapper {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.petition-paragraph {
+  width: 70%;
+  padding-right: 10px;
+}
+.signatures {
+  width: 30%;
+  padding-right: 10px;
+  font-style: italic;
+}
+.form-wrapper {
+  display: flex;
+  color:#282828;
+  justify-content: center;
+}
+
+#sign-now-button {
+  display: block;
+  flex: 1;
+  margin: 5px auto;
+  padding: 3px 5px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); 
+}
+
+/* CHILD HUNGER FACTS */
+#child-hunger-usa-header {
+  position: relative;
+}
+#child-hunger-usa-title {
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.child-hunger-facts-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.fact-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  margin: 10px 10%;
+}
+
+.child-hunger-facts-container #fact-box-middle {
+  flex-direction: row-reverse;
+}
+
+.fact-box-list {
+  width: 60%;
+  height: 30%;
+  padding: 15px 35px 15px 15px;
+  background: rgba(255, 255, 255, 0.75);  
+  border-radius: 20px;
+}
+
+.fact-box-img {
+  max-height: 150px;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  min-height: 2vh;
+  width: 100%;
+  text-align: center;
+  font-size: small;
+  background-color: #C8D6C3;
+}
+
+/* DARK MODE THEME */
+.dark-mode, .dark-mode body{
+  /* background-color:#3c3836; */
+  background:#3c3836;
+  color: white;
+}
+.dark-mode nav, .dark-mode footer{
+  background-color: #282828;
+}
+.dark-mode .nav-header {
+  color: #8ec07c;
+}
+.dark-mode a:link, .dark-mode a:visited{
+  color: #ededed;
+  text-decoration: none;
+}
+.dark-mode a:hover, .dark-mode a:active {
+  color: #fabd2f;
+  text-decoration: none;
+}
+.dark-mode #theme-button {
+  background-color: #9bac95;
+
+}
+.dark-mode #theme-button:hover {
+  background-color: #B1BCAD;;
+}
+
+.dark-mode .hero-buttons button:hover {
+  background-color: #b16286;
+}
+
+.dark-mode .hero-button-left, .dark-mode .hero-button-right {
+  background-color: #d3869b;
+  color: #fbf1c7;
+}
+
+.dark-mode .section-title {
+  -webkit-text-stroke: 2px #A79AB7;;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+}
+
+.dark-mode .support-our-future-container {
+  background-color: #7c6f64;
+}
+.dark-mode .petition {
+  background-color: #928374;
+}
+.dark-mode .petition label {
+  color: #ffd36d;
+  text-shadow: 0 0 3px #282828;
+}
+
+.dark-mode .tool-section-left {
+  background-color: #bdae93;
+}
+
+.dark-mode .tool-section-right {
+  background: #a89974;
+}
+.dark-mode .support-our-future-container {
+  text-shadow: 0 0 5px #282828;
+}
+.dark-mode .support-our-future-header {
+  color: #fabd2f;
+  text-shadow: 0 0 5px #282828;
+}
+.dark-mode .petition-header {
+  color: #ebdbb2;
+  text-shadow: 0 0 5px #282828;
+}
+.dark-mode .fact-box-list {
+  background-color: #83a589;
+  color: #fbf1c7;
+  font-weight: 500;
+}
+
+/* FORM VALIDATION */
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background:pink;
+}
+
+/* ANIMATIONS */
+.revealable {
+  position: relative;
+  transform: translateY(75px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* FORM MODAL */
+.modal {
+  display: none; /* hides the modal from view by default*/
+  position: fixed; /* keeps the modal in one place */
+  z-index: 2; /* positions the modal on top of all other elements on the screen */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.5); /* 50% opacity black background
+  flex-direction: column; /* these flexbox rules center the content on the screen */
+  align-items: center;
+  justify-content: center;
+}
+
+/* box that contains all the content and images */
+.modal-content {
+  background-color: #A79AB7; /* update the colors and font sizes as you like */
+  color: black;
+  text-align: center;
+  font-size: 3rem;
+  display: flex; /* adds flexbox to center all items */
+  justify-content: center;
+  align-items: center;
+}
+
+#thanks-modal-content {
+  flex: 1;
+  width: 20rem; /* sets a default width for the text container */
+}
+
+#modal-text-container {
+  display: flex; /* adds flexbox to center the text and buttons (stretch feature) */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 8px;
+  background-color: white;
+  color: #434343;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}

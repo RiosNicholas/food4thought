@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Food4Thought</title>
+  <link href="assets/stylesheets/reset.css" rel="stylesheet" type="text/css" />
+  <link href="assets/stylesheets/style.css" rel="stylesheet" type="text/css" />
+  <link href="assets/stylesheets/reset-webview.css" rel="stylesheet" type="text/css"/>
+  <link href="assets/images/Food4Thought-Logo-small.png" rel="icon">
+  <!-- HERE Maps API -->
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+  <nav>
+    <div class="nav-header">
+      <h1>Food4Thought</h1> 
+    </div>
+    <div class="nav-list">
+      <ul>
+        <li><a href="#hero-container-nav">Home</a></li>
+        <li><a href="#find-food-banks-container-nav">Find Food Banks</a></li>
+        <li><a href="#support-our-future-container-nav">Support Our Future</a></li>
+        <li><a href="#child-hunger-usa-container-nav">Child Hunger in America</a></li>
+        <li><button id="theme-button">Toggle Dark Mode</button></li>
+        <!-- <li><button id="reduce-motion-button">Reduce Motion</button></li> -->
+      </ul>
+    </div>
+  </nav>
+  <section class="hero-container" id="hero-container-nav"> 
+    <div class="hero-header">
+      <img id="hero-logo" src="assets/images/Food4Thought-Logo.png" alt="Food4Thought Logo">
+      <hr class="hero-horizontal-line">
+      <h2 class="hero-slogan">
+        Supporting Children One Meal at a Time
+      </h2>
+    </div>
+    <div class="hero-buttons">
+      <button class="hero-button-left" onclick="window.location.href='#child-hunger-usa-container-nav'">Learn More</button>
+      <button class="hero-button-right" onclick="window.location.href='#find-food-banks-container-nav'">Locate Food Banks</button>
+    </div>
+  </section>
+  <section class="find-food-banks-container revealable" id="find-food-banks-container-nav">
+    <div class="section-header-wrapper" id="find-food-banks-header">
+      <h2 class="section-title" id="food-bank-section-title">Find Local Food Banks</h2>
+      <img class="section-header-image" id="find-food-banks-header-image"src=assets/images/find-local-food-banks-rectangle.png alt="Mother and child in a grocery store at the produce section.">
+    </div>
+    <div class="food-bank-tool-wrapper">
+      <div class="tool-section-left">
+        <div id="map-container" style="width: 75%; height: 100%"></div>
+      </div>
+      <div class="tool-section-right" id="search-map-container">
+        <form id="search-form">
+          <input type="text" id="location-input" placeholder="Search By Location">
+          <button id="location-submit" type="submit">🔎</button>
+          <div id="search-suggestions">
+            <!-- PLACEHOLDER -->
+            <div class="search-result" id="search-result-one">
+              <p class="search-result-location">
+                <b>123 ABC Street, Newark, NJ, 12345</b>
+              </p>
+              <p class="search-result-phone">
+                (123)-456-7899
+              </p>
+              <p class="search-result-action">
+                <a href="">Pick Up</a> | <a href="">Volunteer</a> | <a href="">Donate</a>
+              </p>
+              <p class="search-result-distance">
+                2 Miles Away
+              </p>
+              <hr class="search-result-hr">
+            </div>
+            <div class="search-result" id="search-result-two">
+              <p class="search-result-location">
+                <b>123 ABC Street, Newark, NJ, 12345</b>
+              </p>
+              <p class="search-result-phone">
+                (123)-456-7899
+              </p>
+              <p class="search-result-action">
+                <a href="">Pick Up</a> | <a href="">Volunteer</a> | <a href="">Donate</a>
+              </p>
+              <p class="search-result-distance">
+                2 Miles Away
+              </p>
+              <hr class="search-result-hr">
+            </div>
+            <div class="search-result" id="search-result-three">
+              <p class="search-result-location">
+                <b>123 ABC Street, Newark, NJ, 12345</b>
+              </p>
+              <p class="search-result-phone">
+                (123)-456-7899
+              </p>
+              <p class="search-result-action">
+                <a href="">Pick Up</a> | <a href="">Volunteer</a> | <a href="">Donate</a>
+              </p>
+              <p class="search-result-distance">
+                2 Miles Away
+              </p>
+              <hr class="search-result-hr">
+            </div>
+            <div class="search-result" id="search-result-four">
+              <p class="search-result-location">
+                <b>123 ABC Street, Newark, NJ, 12345</b>
+              </p>
+              <p class="search-result-phone">
+                (123)-456-7899
+              </p>
+              <p class="search-result-action">
+                <a href="">Pick Up</a> | <a href="">Volunteer</a> | <a href="">Donate</a>
+              </p>
+              <p class="search-result-distance">
+                2 Miles Away
+              </p>
+              <hr class="search-result-hr">
+            </div>
+          </div>
+        </form>        
+      </div>
+    </div>
+  </section>
+  <br>
+  <section class="support-our-future-container revealable" id="support-our-future-container-nav">
+    <h2 class="support-our-future-header">Support Our Future.</h2>
+    <div class="article-description-wrapper">    
+      <p class="article-description">
+        The children of today are the leaders of tomorrow, and access to a healthy diet is vital in their ability to learn and develop as individuals. Take action and ensure that no child goes hungry. Ways to support include volunteering at food banks, hosting food drives, and assisting your local school and community lunch programs.
+      </p>
+      <h4 class="article-cta">
+        <b>   
+          Learn more about the impact of proper nutrition in a child's learning ability and behavior 
+          <a href="https://publications.aap.org/pediatrics/article/144/4/e20190397/38475/Food-Insecurity-and-Child-Health?autologincheck=redirected" target="_blank">here</a>.
+        </b>
+      </h4>
+    </div>
+    <div class="petition revealable" id="support-our-future-petition">
+      <h3 class="petition-header">Get Involved 🙋</h3>
+      <div class="petition-container">
+        <div class="petition-paragraph-wrapper">
+          <p class="petition-paragraph">Thank you for considering getting involved in the fight against child hunger. By providing us with your information, you're taking the first step towards making a real difference in your community. Every child deserves access to healthy, nourishing meals, and your support can help make that a reality. By joining us, you'll have the opportunity to directly impact the lives of children in need and be a part of a community committed to fighting this critical issue. Together, we can create a brighter future for all children. Please input your information below, and we'll reach out with ways you can support this important cause.</p>
+          <div id="signatures">
+            <p>🖊️ DJ from Brooklyn is getting involved.</p>
+            <p>🖊️ Nat from Tallahassee is getting involved.</p>
+            <p>🖊️ Nicholas from Elizabeth is getting involved.</p>
+          </div>
+        </div>
+        <!--- Sign Petition Form --->
+        <div class="form-wrapper">
+          <form id="sign-petition" title="sign-petition">
+            <label for="form-name" class="form-label" >Name:</label>
+            <input type="text" placeholder="John Doe" id="form-name">
+      
+            <label for="form-location" class="form-label" >Location:</label>
+            <input type="text" placeholder="City" id="form-location">
+            
+            <label for="form-email" class="form-label" >Email:</label>
+            <input type="email" placeholder="johndoe@email.com" id="form-email">
+            
+            <!--- Sign Now Button --->
+            <button id="sign-now-button" type="submit">Sign Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="child-hunger-usa-container revealable" id="child-hunger-usa-container-nav">
+    <div class="section-header-wrapper" id="child-hunger-usa-header">
+      <h2 class="section-title" id="child-hunger-usa-title">Child Hunger in the United States</h2>
+      <img class="section-header-image" src="assets/images/child-hunger-usa-rectangle.png" alt="Diverse group of children holding hands as they run together in a park.">
+    </div>
+    <div class="child-hunger-facts-container">
+      <div class="fact-box" id="fact-box-top">
+        <img class="fact-box-img" src="assets/images/picture-of-baby-with-milk.png" alt="Baby drinking milk out of a bottle.">
+        <div class="fact-box-list">
+            <ul>
+              <li class="child-hunger-fact">
+                Upwards of 9 million children faced hunger in 2021 
+                <a href="https://www.feedingamerica.org/hunger-in-america/child-hunger-facts">(FeedingAmerica)</a>.
+              </li>
+              <li class="child-hunger-fact">
+                In the United States, food waste is estimated at between 30–40 percent of the food supply 
+                <a href="https://www.fda.gov/food/consumers/food-loss-and-waste">(FDA)</a>. 
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="fact-box" id="fact-box-middle">
+          <img class="fact-box-img" src="assets/images/adolescent-girls.png" alt="Two adolescent girls standing together as they review a textbook.">
+          <div class="fact-box-list">
+            <ul>  
+              <li class="child-hunger-fact">
+                In 2021, 22% of African-American children were food insecure, and 18.5% of Latino children faced food insecurity 
+                <a href="https://www.ers.usda.gov/publications/pub-details/?pubid=104655">(USDA)</a>.
+              </li>
+              <li class="child-hunger-fact">
+              Nearly four in 10 Black and Hispanic families facing food insecurity during pandemic 
+              <a href="https://www.hsph.harvard.edu/news/hsph-in-the-news/nearly-four-in-10-black-hispanic-families-facing-food-insecurity-during-pandemic/">(Harvard)</a>.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="fact-box" id="fact-box-bottom">
+        <img class="fact-box-img" src="assets/images/young-girls-laughing.png" alt="Two girls laughing together as one girl hugs the other on her lap.">
+        <div class="fact-box-list">
+          <ul>
+            <li class="child-hunger-fact">
+              Many children depend on free meals provided at their schools, so after-school and summer meal programs are vital for when school is out 
+              <a href="https://www.nokidhungry.org/what-we-do/after-school-meals">(No Kid Hungry)</a>.
+            </li>
+            <li class="child-hunger-fact">
+              Food insecure children are more likely to develop behavioral issues and impairments in their ability to focus
+              <a href="https://feedingourkids.org/child-food-insecurity-and-mental-health/">(Feeding Our Kids)</a>.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/XXvllhXB5u4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </section>
+  <div class="modal" id="thanks-modal">
+    <div class="modal-content">
+      <div id="modal-text-container">
+        <p id="thanks-modal-content">
+          Thank you for supporting our battle against child hunger!
+        </p>
+        <button class="modal-button">
+          Close
+        </button>
+      </div>
+      <img id ="modal-img" src="/assets/images/dancing-vegetables.gif">
+    </div>
+  </div>
+  <footer>
+    <p>
+      <a href="https://www.feedingamerica.org/">Feeding America</a>
+      |
+      <a href="https://www.nokidhungry.org/">No Kid Hungry</a>
+      |
+      <a href="https://github.com/RiosNicholas">Nicholas Rios, 2023</a>
+    </p>
+  </footer>
+  <script src="./assets/scripts/index.js"></script>
+  <script src="/assets/scripts/search.js"></script>
+</body>
+</html>
