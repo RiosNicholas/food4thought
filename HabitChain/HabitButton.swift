@@ -44,11 +44,11 @@ struct HabitButton: View {
                 .padding(.vertical, 10) // Adds vertical padding of 10 points
                 //.background(backgroundColor)
                 .background(LinearGradient(
-                    gradient: Gradient(colors: gradientColor),
+                    gradient: Gradient(colors: buttonColor.gradientColor),
                     startPoint: .bottom,
                     endPoint: .top)
                 )
-                .foregroundColor(textColor)
+                .foregroundColor(buttonColor.textColor)
                 .cornerRadius(10)
             }
 
@@ -66,7 +66,14 @@ struct HabitButton: View {
 
 struct HabitButton_Previews: PreviewProvider {
     static var previews: some View {
-        //HabitButton(habit: "Drink water", icon: "💧",backgroundColor: .green, textColor: .white)
-        HabitButton(habit: "Exercise", emoji: "💪", goodHabit: true, textColor: .white, gradientColor: [.green, .white])
+        HabitButton(
+            chainNum: 0,
+            habit: "Exercise",
+            emoji: "💪",
+            goodHabit: true,
+            textColor: .white,
+            gradientColor: [.green, .white],
+            buttonColor: <#T##ButtonColor#>
+        )
     }
 }

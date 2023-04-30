@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ButtonColor: View {
-    let habit: HabitData
-    let chainNum: Int
+    var habit: HabitData
+    var chainNum: Int
+    var gradientColor: [Color]
+    var textColor: Color {
+        return goodHabit ? Color.white : Color.black
+    }
     var body: some View {
         let gradientColor: [Color]
         

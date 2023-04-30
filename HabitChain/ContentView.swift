@@ -23,8 +23,8 @@ struct ContentView: View {
                     HStack(spacing: 20) {
                         let firstIndex = index * 2
                         let secondIndex = firstIndex + 1
-                        HabitButton(habit: DataModel.habits[firstIndex].habit, emoji: DataModel.habits[firstIndex].emoji, goodHabit: DataModel.habits[firstIndex].goodHabit, textColor: DataModel.habits[firstIndex].textColor, gradientColor: DataModel.habits[firstIndex].gradientColor)
-                        HabitButton(habit: DataModel.habits[secondIndex].habit, emoji: DataModel.habits[secondIndex].emoji, goodHabit: DataModel.habits[secondIndex].goodHabit, textColor: DataModel.habits[secondIndex].textColor, gradientColor: DataModel.habits[secondIndex].gradientColor)
+                        HabitButton(habit: DataModel.habits[firstIndex].habit, emoji: DataModel.habits[firstIndex].emoji, goodHabit: DataModel.habits[firstIndex].goodHabit, textColor: DataModel.habits[firstIndex].textColor, gradientColor: DataModel.habits[firstIndex].buttonColor.gradientColor)
+                        HabitButton(habit: DataModel.habits[secondIndex].habit, emoji: DataModel.habits[secondIndex].emoji, goodHabit: DataModel.habits[secondIndex].goodHabit, textColor: DataModel.habits[secondIndex].textColor, gradientColor: DataModel.habits[secondIndex].buttonColor.gradientColor)
                     }
                 }
             }
