@@ -18,7 +18,6 @@ struct ContentView: View {
                 .padding(.bottom, 20.0)
         
             
-             //I give up on this for now, but I would have wanted to use a datamodel to input my data
             VStack(spacing: 20) {
                 ForEach(0..<DataModel.habits.count/2, id: \.self) { index in
                     HStack(spacing: 20) {
@@ -29,7 +28,6 @@ struct ContentView: View {
                     }
                 }
             }
-
 
             Spacer() // Removes white space and pushes content to fill the entire screen
         }

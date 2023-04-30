@@ -15,6 +15,7 @@ struct HabitButton: View {
     // var backgroundColor : Color
     var textColor: Color
     var gradientColor: [Color]
+    var buttonColor: ButtonColor 
     
     var body: some View {
         Button(action: {
