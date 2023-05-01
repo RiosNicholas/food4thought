@@ -13,10 +13,10 @@ struct HabitData: Hashable {
     var emoji: String
     var goodHabit: Bool
     var textColor: Color {
-        return goodHabit ? Color.white : Color.black
+       return goodHabit ? Color.white : Color.black
     }
     var gradientColor: [Color] {
-        return goodHabit ? [.green, .white] : [.red, .white]
+       return goodHabit ? [.green, .white] : [.red, .white]
     }
 }
 
@@ -26,7 +26,7 @@ class DataModel: NSObject {
         HabitData(habit: "Late Bedtime", emoji: "😴", goodHabit: false),
         HabitData(habit: "Sugary Foods", emoji: "🍩", goodHabit: false),
         HabitData(habit: "Reading", emoji: "📖", goodHabit: true),
-        HabitData(habit: "Journaling", emoji: "📝", goodHabit: false),
+        HabitData(habit: "Journaling", emoji: "📝", goodHabit: true),
         HabitData(habit: "Stretching", emoji: "🙆‍♂️", goodHabit: true),
         HabitData(habit: "Exercise", emoji: "🏋️", goodHabit: true)
     ]
