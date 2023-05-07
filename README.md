@@ -12,8 +12,16 @@ The website primarily targets families facing food insecurity because of its foo
 
 ***
 
+<h3>Current Progress</h3>
+<p align="center">
+  <img src="preview/Food4Thought-Walkthrough.gif" alt="Live website walkthrough" width="500" height="auto">
+</p>
+
+***
+
 <h3>Mockup</h3>
 <p align="center">
-  <img src="food4thought-figma-mockup.png" alt="Website mockup">
+  <img src="preview/food4thought-figma-mockup.png" alt="Website mockup">
 </p>
+
 
